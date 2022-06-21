@@ -1,0 +1,249 @@
+* {
+    border-style: border-box;
+}
+
+:root {
+    --main-color: hsl(245, 75%, 52%);
+    --second-color: hsl(223, 47%, 23%);
+    --third-color: hsl(224deg 6% 42%);
+    --color: hsl(225, 100%, 98%);
+    --dark-mode: hsl(229, 79%, 17%);
+    --border: 10px;
+}
+body {
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.main {
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 42px);
+    transform: translate(-50%, -50%);
+    border-radius: var(--border);
+    width: 450px;
+    background: var(--color);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    box-shadow: 0 0px 20px 0px var(--third-color);
+}
+
+.main > img {
+    background: var(--color);
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -ms-border-radius: 10px 10px 0px 0px;
+    -o-border-radius: 10px 10px 0px 0px;
+}
+
+.main .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px;
+    background-color: var(--color);
+    gap: 15px;
+    border-radius: var(--border);
+    -webkit-border-radius: var(--border);
+    -moz-border-radius: var(--border);
+    -ms-border-radius: var(--border);
+    -o-border-radius: var(--border);
+}
+
+.main .title h2 {
+    color: var(--dark-mode);
+    font-weight: 800;
+    margin: 0;
+    font-size: 30px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.main .title h2:hover {
+    text-shadow: 0 0px 1px var(--dark-mode);
+}
+
+.main .title p {
+    text-align: center;
+    color: var(--third-color);
+    margin-top: 0;
+}
+
+.main .title .plan {
+    display: flex;
+    background-color:hsla(224, 31%, 79%, 0.219);
+    align-items: center;
+    border-radius: var(--border);
+    -webkit-border-radius: var(--border);
+    -moz-border-radius: var(--border);
+    -ms-border-radius: var(--border);
+    -o-border-radius: var(--border);
+    padding: 20px;
+    gap: 10px;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.main .title .plan img {
+    width: 50px;
+    height: 50px;
+}
+
+.main .title .plan .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main .title .plan .text h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.main .title .plan .text p {
+    margin: 0;
+}
+
+.main .title .plan a {
+    margin-left: 68px;
+    text-decoration: none;
+    color: var(--main-color);
+    position: relative;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.main .title .plan a::before {
+    content: '$59.99/year';
+    width: 50px;
+    right: 180px;
+    top: 12px;
+    color: var(--third-color);
+}
+
+.main .title .plan a::after {
+    content: 'Annaul Plan';
+    width: 100px;
+    right: calc(160px - 30px);
+    bottom: 12px;
+    color: var(--second-color);
+    font-weight: 600;
+}
+
+.main .title .plan a::before,
+.main .title .plan a::after {
+    height: 25px;
+    position: absolute;
+    cursor: default;
+}
+
+.main .title button {
+    padding: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    width: 90%;
+    margin-top: 20px;
+    background-color: var(--main-color);
+    border-radius: var(--border);
+    -webkit-border-radius: var(--border);
+    -moz-border-radius: var(--border);
+    -ms-border-radius: var(--border);
+    -o-border-radius: var(--border);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.main .title button:first-of-type:hover {
+    box-shadow: 0 5px 30px 0 var(--main-color);
+}
+
+.main .title button:last-child {
+    background-color: transparent;
+    color: var(--third-color);
+    margin-top: 0;
+    cursor: default;
+}
+
+.main .title button:last-child a {
+    text-decoration: none;
+    color: var(--third-color);
+}
+
+.attribution {
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    padding: 15px;
+    width: calc(100% - 30px); 
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+/* Make it responsive with mobile phones */
+
+@media (max-width: 478px) {
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+    .main {
+        width: 340px;   
+    }
+    .main .title {
+        padding: 20px 40px;
+    }
+    .main .title h2 {
+        font-size: 22px;
+    }
+    .main .title p {
+        font-size: 15px;
+    }
+    .main .title .plan {
+        padding: 10px;
+        width: 90%;
+    }
+    .main .title .plan a {
+        font-size: 13px;
+    }
+    .main .title .plan a::after {
+        right: calc(160px - 30px - 80px + 20px);
+        bottom: 5px;
+    }
+    .main .title .plan a::before {
+        right: 120px;
+        top: 12px;
+    }
+    .main .title button {
+        width: 100%;
+    }
+}
